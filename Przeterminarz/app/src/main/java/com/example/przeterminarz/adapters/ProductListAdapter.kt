@@ -5,16 +5,17 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.przeterminarz.databinding.ItemProductBinding
 import com.example.przeterminarz.model.Product
+import java.text.ParseException
+import java.text.SimpleDateFormat
 
 class ProductItem(val itemViewBinding: ItemProductBinding) : RecyclerView.ViewHolder(itemViewBinding.root){
-
     fun onBind(productItem: Product) = with(itemViewBinding){
         productName.setText(productItem.name)
         productImage.setImageResource(productItem.productIcon)
-        productDescription.setText(productItem.category)
+        productDueDate.setText(productItem.dueDate)
+        productItemCount.setText(productItem.amount)
         productCategoryImage.setImageResource(productItem.categoryIcon)
     }
-
 }
 class ProductListAdapter : RecyclerView.Adapter<ProductItem>() {
 

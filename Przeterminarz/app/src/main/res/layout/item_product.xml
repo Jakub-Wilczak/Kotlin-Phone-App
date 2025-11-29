@@ -27,7 +27,7 @@
             android:id="@+id/productCategoryImage"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            app:layout_constraintBottom_toTopOf="@+id/productDescription"
+            app:layout_constraintBottom_toTopOf="@+id/productDueDate"
             app:layout_constraintEnd_toStartOf="@+id/productName"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -42,22 +42,34 @@
             android:gravity="center"
             android:text="Romek Rodek"
             android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
-            app:layout_constraintBottom_toTopOf="@+id/productDescription"
+            app:layout_constraintBottom_toTopOf="@+id/productDueDate"
             app:layout_constraintEnd_toStartOf="@+id/productImage"
             app:layout_constraintStart_toEndOf="@+id/productCategoryImage"
             app:layout_constraintTop_toTopOf="@+id/productImage" />
 
         <TextView
-            android:id="@+id/productDescription"
+            android:id="@+id/productDueDate"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:gravity="center_horizontal"
-            android:text="ALLELUJE, Zjadłbym coś dobrego lol. GIMME FOOD. Nie wiem, po co to piszę, ale wygląda fajnie LOLOLOLOLOL"
+            android:text="30/11/2025"
             android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
             app:layout_constraintBottom_toBottomOf="@+id/productImage"
             app:layout_constraintEnd_toStartOf="@+id/productImage"
             app:layout_constraintStart_toStartOf="@+id/productName"
-            app:layout_constraintTop_toBottomOf="@+id/productCategoryImage" />
+            app:layout_constraintTop_toBottomOf="@+id/productCategoryImage"/>
 
+        <TextView
+            android:id="@+id/productItemCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/productCategoryImage"
+            app:layout_constraintTop_toBottomOf="@+id/productCategoryImage"
+            app:layout_constraintEnd_toEndOf="@+id/productCategoryImage"
+            />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
