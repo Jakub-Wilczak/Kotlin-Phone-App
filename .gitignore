@@ -416,3 +416,8 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# My own gitignore from now on -------------------------------------------------------------------
+
+# Android Studio files
+*.idea
