@@ -12,8 +12,11 @@ class ProductItem(val itemViewBinding: ItemProductBinding) : RecyclerView.ViewHo
     fun onBind(productItem: Product) = with(itemViewBinding){
         productName.setText(productItem.name)
         productImage.setImageResource(productItem.productIcon)
-        productDueDate.setText(productItem.dueDate)
-        productItemCount.setText(productItem.amount)
+
+
+
+        productDueDate.setText("${productItem.dueDate.date}/${productItem.dueDate.month+1}/${productItem.dueDate.year+1900}")
+        productItemCount.setText(productItem.amount.toString())
         productCategoryImage.setImageResource(productItem.categoryIcon)
     }
 }

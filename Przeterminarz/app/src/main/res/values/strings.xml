@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Przeterminarz</string>
+    <string name="product_due_date">Data ważności</string>
+    <string name="dodaj_produkt">Dodaj Produkt</string>
+    <string name="nazwa_produktu">Nazwa Produktu</string>
+    <string name="name">Name</string>
+    <string name="kategoria_produktu">Kategoria Produktu</string>
+
+    <string name="wybrany_produkt">Selected item:</string>
+    <string-array name="kategorieProdukty">
+        <item>spozywczy</item>
+        <item>kosmetyczny</item>
+        <item>medyczny</item>
+    </string-array>
+
+
 </resources>

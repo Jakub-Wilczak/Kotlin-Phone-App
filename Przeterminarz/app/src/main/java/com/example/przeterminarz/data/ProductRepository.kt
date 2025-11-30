@@ -1,6 +1,7 @@
 package com.example.przeterminarz.data
 
 import com.example.przeterminarz.model.Product
+import java.util.Date
 
 interface ProductRepository {
     fun getProductList(): List<Product>
@@ -9,5 +10,5 @@ interface ProductRepository {
 
     fun getProductList(category: Int): List<Product>
 
-    fun addProduct(product: Product)
+    fun addProduct(name: String, dueDate: Date, amount: Int?, productIcon: Int, categoryIcon: Int) :String
 }

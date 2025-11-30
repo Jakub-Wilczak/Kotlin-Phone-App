@@ -1,6 +1,7 @@
 package com.example.przeterminarz.model
 
 import androidx.annotation.DrawableRes
+import java.time.LocalDate
 import java.util.Date
 
 data class Product(
@@ -9,6 +10,6 @@ data class Product(
     @DrawableRes
     val categoryIcon: Int,
     val name: String,
-    val dueDate: String,
-    val amount: String? = "1",
+    val dueDate: Date,
+    val amount: Int? = 1,
     )

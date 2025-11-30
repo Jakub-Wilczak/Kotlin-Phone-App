@@ -26,7 +26,7 @@
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/avtivity_main_logobar"
         app:srcCompat="@drawable/swiezakimage" />
 
     <ScrollView
@@ -54,7 +54,7 @@
     </ScrollView>
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/avtivity_main_logobar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
@@ -67,7 +67,7 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
+        android:layout_marginEnd="125dp"
         android:layout_marginBottom="5dp"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -77,12 +77,14 @@
         android:id="@+id/imageButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginBottom="4dp"
+        android:scaleX="1.3"
+        android:scaleY="1.3"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
-        app:layout_constraintHorizontal_bias="0.869"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/AddProduct"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
         app:srcCompat="@drawable/baseline_filter_list_alt_24" />
 
     <ImageView

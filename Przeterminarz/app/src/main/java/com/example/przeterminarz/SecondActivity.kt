@@ -9,6 +9,8 @@ import com.example.przeterminarz.databinding.SecondScreenBinding
 
 class SecondActivity : AppCompatActivity(){
 
+
+    lateinit var mainActivityBinding: ActivityMainBinding
     lateinit var thisScreenBinding: SecondScreenBinding
 
 
@@ -18,7 +20,9 @@ class SecondActivity : AppCompatActivity(){
 
         thisScreenBinding= SecondScreenBinding.inflate(layoutInflater)
 
-        thisScreenBinding.
+        thisScreenBinding.secondScreenToMain.setOnClickListener {
+            setContentView(mainActivityBinding.root)
+        }
 
     }
 }

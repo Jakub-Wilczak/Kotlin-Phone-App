@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainaddproductlayout"
+    tools:context=".MainActivity">
+
+
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_product_AddproductButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:clickable="true"
+        android:src="@android:drawable/ic_input_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/add_product_logobar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/add_product_mainText"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/dodaj_produkt"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_product_logobar" />
+
+    <TextView
+        android:id="@+id/add_product_nameTextInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-10dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/nazwa_produktu"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toStartOf="@+id/add_product_editName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_product_mainText" />
+
+    <EditText
+        android:id="@+id/add_product_editName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/name"
+        app:layout_constraintBottom_toBottomOf="@id/add_product_nameTextInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/add_product_nameTextInfo"
+        app:layout_constraintTop_toBottomOf="@+id/add_product_mainText" />
+
+
+    <TextView
+        android:id="@+id/add_product_categoryInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/kategoria_produktu"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/add_product_editProductCategory"
+        app:layout_constraintStart_toStartOf="@+id/add_product_nameTextInfo"
+        app:layout_constraintTop_toTopOf="@id/add_product_editProductCategory" />
+
+    <Spinner
+        android:id="@+id/add_product_editProductCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        app:layout_constraintStart_toStartOf="@+id/add_product_editName"
+        app:layout_constraintTop_toBottomOf="@id/add_product_editName"
+        app:layout_goneMarginTop="40dp" />
+
+
+    <TextView
+        android:id="@+id/add_product_productDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/product_due_date"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/add_product_editProductDate"
+        app:layout_constraintStart_toStartOf="@id/add_product_nameTextInfo"
+        app:layout_constraintTop_toTopOf="@+id/add_product_editProductDate" />
+
+
+    <DatePicker
+        android:id="@+id/add_product_editProductDate"
+        android:layout_width="225dp"
+        android:layout_height="196dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="15dp"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:scaleX="0.9"
+        android:scaleY="0.9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/add_product_editName"
+        app:layout_constraintTop_toBottomOf="@+id/add_product_editProductCategory" />
+
+    <Button
+        android:id="@+id/Add_product_backToMain"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginBottom="5dp"
+        android:text="Powrót"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/add_product_productAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ilość produktów"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/add_product_editProductAmount"
+        app:layout_constraintStart_toStartOf="@id/add_product_nameTextInfo"
+        app:layout_constraintTop_toTopOf="@+id/add_product_editProductAmount" />
+
+    <NumberPicker
+        android:id="@+id/add_product_editProductAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/add_product_editProductDate"
+        app:layout_constraintTop_toBottomOf="@+id/add_product_editProductDate" />
+
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
