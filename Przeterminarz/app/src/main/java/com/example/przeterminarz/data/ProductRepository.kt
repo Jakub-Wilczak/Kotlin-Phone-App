@@ -8,4 +8,6 @@ interface ProductRepository {
     fun getProductAmount(): Int
 
     fun getProductList(category: Int): List<Product>
+
+    fun addProduct(product: Product)
 }

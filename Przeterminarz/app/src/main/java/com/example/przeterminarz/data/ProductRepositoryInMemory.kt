@@ -19,6 +19,7 @@ object ProductRepositoryInMemory : ProductRepository{
         Product(R.drawable.euthyrox, R.drawable.medyczny,"Euthyrox","30/02/2027"),
         )
     override fun getProductList(): List<Product> {
+
         return productList
     }
 

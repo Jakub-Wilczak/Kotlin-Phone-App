@@ -18,6 +18,10 @@ import com.example.przeterminarz.databinding.SecondScreenBinding
 
 class MainActivity : AppCompatActivity() {
 
+    fun updateItemCount(){
+
+    }
+
 
     lateinit var ProductRepository: ProductRepository
     lateinit var binding1: ActivityMainBinding
@@ -29,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
 
         binding1=ActivityMainBinding.inflate(layoutInflater)
-        binding2= SecondScreenBinding.inflate(layoutInflater)
+
         var productRepository = ProductRepositoryInMemory
 
 
@@ -44,8 +48,13 @@ class MainActivity : AppCompatActivity() {
 
         productListAdapter.productList = productRepository.getProductList()
 
-
         setContentView(binding1.root)
+        val textView: TextView = findViewById(R.id.pantryAmount)
+        textView.text = productRepository.getProductAmount().toString()
+
+
+
+
 
 
         ViewCompat.setOnApplyWindowInsetsListener(binding1.mainLayout) { v, insets ->
